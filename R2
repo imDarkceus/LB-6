@@ -3,50 +3,50 @@
 int main() {
     int num, digit, rev = 0;
 
-    printf("Enter an integer: ");
+    printf("Enter a number: ");
     scanf("%d", &num);
 
     // Reverse the number to print digits in the correct order
     while (num != 0) {
         digit = num % 10;
-
         rev = rev * 10 + digit;
         num /= 10;
     }
 
+    printf("The digits are: ");
     // Print the digits in words
     while (rev != 0) {
         digit = rev % 10;
         switch (digit) {
             case 0:
-                printf("zero ");
+                printf("Zero ");
                 break;
             case 1:
-                printf("one ");
+                printf("One ");
                 break;
             case 2:
-                printf("two ");
+                printf("Two ");
                 break;
             case 3:
-                printf("three ");
+                printf("Three ");
                 break;
             case 4:
-                printf("four ");
+                printf("Four ");
                 break;
             case 5:
-                printf("five ");
+                printf("Five ");
                 break;
             case 6:
-                printf("six ");
+                printf("Six ");
                 break;
             case 7:
-                printf("seven ");
+                printf("Seven ");
                 break;
             case 8:
-                printf("eight ");
+                printf("Eight ");
                 break;
             case 9:
-                printf("nine ");
+                printf("Nine ");
                 break;
         }
         rev /= 10;
