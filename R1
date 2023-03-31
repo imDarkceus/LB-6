@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    float x, sum = 1.0, term = 1.0;
+    int i, n;
+
+    printf("Enter the value of x: ");
+    scanf("%f", &x);
+
+    printf("Enter the number of terms to be calculated: ");
+    scanf("%d", &n);
+
+    for (i = 1; i < n; i++) {
+        term *= x / i;
+        sum += term;
+    }
+
+    printf("The value of e^%f is %f", x, sum);
+
+    return 0;
+}
