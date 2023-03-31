@@ -1,22 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int num, digit, rev = 0;
+    int num, digit;
 
-    printf("Enter a number: ");
+    printf("Enter an integer: ");
     scanf("%d", &num);
 
-    // Reverse the number to print digits in the correct order
+    printf("The digits in reverse order are: ");
+
+    // Print each digit in reverse order
     while (num != 0) {
         digit = num % 10;
-        rev = rev * 10 + digit;
-        num /= 10;
-    }
-
-    printf("The digits are: ");
-    // Print the digits in words
-    while (rev != 0) {
-        digit = rev % 10;
         switch (digit) {
             case 0:
                 printf("Zero ");
@@ -49,7 +43,7 @@ int main() {
                 printf("Nine ");
                 break;
         }
-        rev /= 10;
+        num /= 10;
     }
 
     return 0;
